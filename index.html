@@ -36,7 +36,7 @@
             <input
               type="text"
               class="form-control input-sm"
-              id="inputsm"
+              id="taskInput"
               placeholder="to do list"
             />
             <label for="floatingInput" style="left: 5px">My task to do:</label>
@@ -44,47 +44,15 @@
         </div>
 
         <div class="col-12 col-sm-4">
-          <button type="button" class="btn btn-dark btn-lg">Add task</button>
+          <button type="button" class="btn btn-dark btn-lg" id="addBtn">
+            Add task
+          </button>
         </div>
       </div>
       <h2 class="mt-4">My tasks:</h2>
 
       <div class="row">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <input
-              class="form-check-input me-1"
-              type="checkbox"
-              value=""
-              id="firstCheckbox"
-            />
-            <label class="form-check-label" for="firstCheckbox"
-              >First checkbox</label
-            >
-          </li>
-          <li class="list-group-item">
-            <input
-              class="form-check-input me-1"
-              type="checkbox"
-              value=""
-              id="secondCheckbox"
-            />
-            <label class="form-check-label" for="secondCheckbox"
-              >Second checkbox</label
-            >
-          </li>
-          <li class="list-group-item">
-            <input
-              class="form-check-input me-1"
-              type="checkbox"
-              value=""
-              id="thirdCheckbox"
-            />
-            <label class="form-check-label" for="thirdCheckbox"
-              >Third checkbox</label
-            >
-          </li>
-        </ul>
+        <ul class="list-group list-group-flush" id="tasksList"></ul>
       </div>
     </main>
     <!-- JavaScript Bundle with Popper -->
@@ -93,5 +61,8 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+
+    <!----Main Javascript---->
+    <script src="./index.js"></script>
   </body>
 </html>
