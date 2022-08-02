@@ -19,13 +19,25 @@ let arr = [
 
 document.getElementById("addBtn").addEventListener("click", () => {
   const inputValue = document.getElementById("taskInput").value;
+  const form = document.getElementById("taskInput");
+
+  //tikrinam ar tuščias input stringas//
+  if (!inputValue.trim()) {
+    alert("You must write something!");
+    //trina parašyta formą//
+    form.value = "";
+    return;
+  }
+  console.log("text");
 
   const newTask = {
     id: new Date().getTime(),
     task: inputValue,
   };
 
-  arr.push(newTask);
+  form.value = "";
+
+  arr.unshift(newTask);
   drawTaskList();
 });
 
